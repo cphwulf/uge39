@@ -3,8 +3,7 @@
 * At læse en større programstump og kunne tilpasse den
 
 * OPGAVEN:
-* Hangman-programmet virker nogenlunde men er langt fra perfekt. Bla er teksten taget helt random
-* fra nettet. Overvej om I vil bruge en anden tekst i stedet. Brug lidt tid på at eksperimentere
+* Hangman-programmet virker nogenlunde men er langt fra perfekt. Brug lidt tid på at eksperimentere
 * med koden. Bla er teksten taget helt random fra nettet så overvej om I vil bruge en anden tekst i stedet.
 * Løs derpå flg tasks:
 *
