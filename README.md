@@ -8,7 +8,7 @@
 - opgaveformuleringen er i CharHistogram
 
 3) Hangman
-- kan I færdiggøre dette hangman-projekt?
+- Forbedre noget kode som ikke er færdigt (opgaveformuleringen er i Hangman)
 
 4) Yatzy - en begyndelse
 - Die, DieCup og YatzyGame (opgaveformuleringen er i YatzyGame)
