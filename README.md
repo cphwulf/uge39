@@ -1,13 +1,14 @@
 # Opgaver til uge 39 
 ### Rækkefølgen 
 
-0) DoggKennel og Dogg
+1) DoggKennel og Dogg
 - opgaveformuleringen er i DoggKennel
 
-1) CharHistogram og ArraysHelper
+2) CharHistogram og ArraysHelper
+- opgaveformuleringen er i CharHistogram
 
-2) Hangman
+3) Hangman
 - kan I færdiggøre dette hangman-projekt?
 
-3) Yatzy - en begyndelse
-- Die, DieCup og YatzyGame
+4) Yatzy - en begyndelse
+- Die, DieCup og YatzyGame (opgaveformuleringen er i YatzyGame)
