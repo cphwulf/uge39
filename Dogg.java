@@ -5,12 +5,15 @@ public class Dogg {
 	private double pris;
 	private String køn;
 	private String ejer;
-        // TODO opg2: Attribut til sulten
-        // TODO opg3: Attribut til hvalpe
+        // TODO: Attribut til hvalpe
+	private String[] offSpring;
+	private boolean isHungry;
 	
-	public Dogg(String navn){
+	public Dogg(String navn, boolean isHungry){
 		this.navn = navn;
-                // TODO opg3: initialisér hvalpearrayet
+		this.isHungry = isHungry;
+                // TODO: initialisér hvalpearrayet
+		this.offSpring = new String[12];
 	}
 	
 	public String getOwner() {
@@ -19,9 +22,15 @@ public class Dogg {
 	public String[] getOffSpring() {
 		return this.offSpring;
 	}
-        //TODO opg 3:lav metoden setOffSpring som sætter en given Streng med
+        //TODO:lav metoden setOffSpring som sætter en given Streng med
         //hvalpenavn ind i offSpring
-	// 
+	public void setOffSpring(String puppy) {
+		int counter = 0;
+		while(this.offSpring[counter]!= null) {
+			counter++;
+		}
+		this.offSpring[counter]=puppy;
+	}
 
 	public void setOwner(String myOwner) {
 		this.ejer = myOwner;
@@ -38,8 +47,17 @@ public class Dogg {
 	public String toString() {
 		return "Dog named " + navn;
 	}
-		// TODO opg 2: Lav en feedDog-metode. Hhunden skal fodres kun hvis den er sulten
+	public String feedDog() {
+		// TODO: hunden skal fodres kun hvis den er sulten
 		// hvis den er blevet fodret skal der sættes en attribut-værdi
 		// returnér en besked om hvorvidt den er blevet fodret
-                // 
+		String msg;
+		if (this.isHungry) {
+			msg = "Feeding " + navn;
+				this.isHungry = false;
+		} else {
+			msg = "Not Feeding "+ navn;
+		}
+		return msg;
+	}
 }

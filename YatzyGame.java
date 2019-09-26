@@ -2,30 +2,48 @@ package yatzygame;
 public class YatzyGame {
 	/*
 	OPGAVEN:
-	Yatzyprogrammet er langt fra færdigt men udviklerne er ikke nået længere. Så opgaven
-	består i at få testet det som er lavet ind til nu. 
-        Der er lavet en klasse DieCup. Undersøg den, gå til main  og lav derpå 
-	et nyt bæger, som skal rystes med et holdPattern. 
-        Dette mønster skal angive hvilke terninger man satser på, dvs der ikke skal rystes 
-	Når udviklerne kommer tilbage efter weekenden laver de noget kode hvor dette mønster kommer 
-        fra en bruger. Men idag består opgaven så i at lave en metode i main som kan simulere 
-        dette brugergenererede holdemønster. 
-        Signaturen på metoden er er flg:
+	Yatzyprogrammet er langt fra færdigt men vi når ikke mere idag. Så opgaven
+	består i at få testet det vi har ind til nu. Der skal altså laves
+	et nyt bæger, som skal rystes med et holdPattern. Dette mønster skal
+	i næste omgang komme fra brugeren men opgaven består i at lave en
+	metode i main som kan simulere et holdemønster. Signaturen er flg:
 	public static int[] userGet(String task)
 	og håndteres på flg måde i main:
 	holdPattern = userGet("holdPattern");
-	så det kan bruges i kaldet til bægerets shuffle-metode.
+	så det kan bruges i kaldet til bægerets shufflte-metode.
 	
 	*/
 	
 	public static void main(String[] args) {
-		//TODO: lav et bæger, hent et holdpattern og ryst et antal gange
-                // print bægeret efter hvert ryst.
+		//TODO: lav et bæger og ryst et antal gange
+		int[] holdPattern = new int[4];
+		DieCup myCup = new DieCup();
+		System.out.println(myCup);
+		holdPattern = userGet("holdPattern");
+		myCup.shuffle(holdPattern);
+		System.out.println(myCup);
+		holdPattern = userGet("holdPattern");
+		myCup.shuffle(holdPattern);
+		System.out.println(myCup);
+		holdPattern = userGet("holdPattern");
+		myCup.shuffle(holdPattern);
+		System.out.println(myCup);
+		holdPattern = userGet("holdPattern");
+		myCup.shuffle(holdPattern);
+		System.out.println(myCup);
+		holdPattern = userGet("holdPattern");
+		myCup.shuffle(holdPattern);
+		System.out.println(myCup);
 		
 	}
 	public static int[] userGet(String task) {
-          // TODO: sørg for at metoden returnerer noget som
+          // TODO: sørg for at metoden returnere noget som
           // kan bruges i bægerets ryste-metode
+		int[] holdPat = new int[4];
+		if (task.equals("holdPattern")) {
+			holdPat = new int[] {0,0,0,1,1};
+		}
+		return holdPat;
 	}
 }
 

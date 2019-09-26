@@ -25,26 +25,37 @@ private String ejer;
 så det bliver til:
 private Owner ejer;
 Når det er ændret vil man også skulle ændre i getter og setter samt i main.
+Flg skal kunne virke fra main:
+System.out.println("hunden " + getHundeNavn() + " er ejet af " + myDog.getOwner());
 
 5) Gør det samme for offSpring. Dvs
 private String[] offSpring; bliver til
 private Dog[] offSpring;
 
-Main-metoden skal nok også ændres løbende så den bliver ved med at virke.
-
 */
 import java.util.Arrays;
 public class DoggKennel {
 	public static void main(String[] args) {
-		//TODO opg 1:
+		//TODO:
 		// lav en ny hund
-		// sæt en ejer der hedder Henning
-		// TODO opg 3: tilføj to hvalpe når hundeklassen er klar til hvalpe
+		Dogg myDog = new Dogg("woodie", true);
+		// sæt en ejer
+		myDog.setOwner("Henning");
+		// TODO: tilføj to hvalpe når hundeklassen er klar til hvalpe
+		myDog.setOffSpring("woodiesnoopie");
+		myDog.setOffSpring("woodiesfido");
 		
-		// TODO opg 3: print alle hvalpe
-		// TODO opg 1: print ejeren "min hund er ejet af Henning"
-                // hvor ejernavnet hentes vha en getter
-		// TODO opg 2: fodr hunden når hundeklassen er modificeret så den kan fodres
+		// print alle hvalpe
+		String[] myOff = myDog.getOffSpring();
+		for (String myD: myOff) {
+			System.out.println(myD);
+		}
+		System.out.println(Arrays.toString(myOff));
+		// print ejeren
+		System.out.println("miin hhund er ejet af " + myDog.getOwner());
+		// TODO: fodr hunden når hundeklassen er modificeret så den kan fodres
+		String resString = myDog.feedDog();
+		System.out.println(resString);
 	}
 	
 }

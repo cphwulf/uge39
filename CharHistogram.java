@@ -16,10 +16,8 @@ public class CharHistogram {
            * skriv en metode - uniqueArr - som har følgende signatur:
            * public static void uniqueArr(int[] myArr, int[] myRetValArr){
            * myArr er et array fyldt med tilfældige heltal i en given range
-           * i myArr.
-           * myRetValArr er et array som rummer hyppighederne af tallene i myArr
-           * Metoden skal altså tælle hyppigheden af de enkelte tal i rangen, gemme det i
-           * myRetValArr  og printe så et histogram som vist nedenfor
+           * Metoden skal tælle hyppigheden af de enkelte tal i rangen og printe
+           * et histogram som vist nedenfor
            *
            * TESTKØRSEL:
            * Metoden skal printe flg:
@@ -44,10 +42,24 @@ public class CharHistogram {
 		int size = 40;
 		int randRange = 9;
 		int[] myArr = new int[size];
-		//ArrayHelper.fillWithRand(myArr,randRange);
+		ArrayHelper.fillWithRand(myArr,randRange);
 		int[] myRetArr = new int[randRange+1];
-		//uniqueArr(myArr,myRetArr);
+		uniqueArr(myArr,myRetArr);
 		
 	}
-        // TODO: Her skrives uniqeArr-metoden
+	public static void uniqueArr(int[] myArr, int[] myRetValArr){
+		for (int i=0;i<myArr.length-1;i++) {
+			int idx=myArr[i];
+			myRetValArr[idx]++;
+		}
+		System.out.println(Arrays.toString(myRetValArr));
+		for (int i=0;i<myRetValArr.length-1;i++) {
+		String myC ="*";
+		String myS ="";
+			for (int j=0;j<myRetValArr[i];j++) {
+				myS = myS + myC;
+			}
+			System.out.printf("%d:%s%n",i,myS);
+		}
+	}
 }
